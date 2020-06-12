@@ -1,0 +1,5 @@
+name: KApi
+main: core.kyriums.api.plugin.core
+version: 0.1.0
+author: Kyrium
+commands: 
