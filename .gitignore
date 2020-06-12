@@ -1,0 +1,9 @@
+.metadata/
+
+KMines/workspace/bin
+KMines/workspace/.project
+KMines/workspace/.classpath
+
+KApi/workspace/bin
+KApi/workspace/.project
+KApi/workspace/.classpath

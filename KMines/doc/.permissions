@@ -1,0 +1,19 @@
+[LIST]
+[*]kMines.* - Allgemein alle Rechte für das Plugin
+[*]kMines.cmd.* - Rechte für alle Befehle
+[*]kMines.cmd.help - Rechte für /KMines help
+[*]kMines.cmd.regionadd - Rechte für /KMines regionadd
+[*]kMines.cmd.remove - Rechte für /KMines remove
+[*]kMines.cmd.list - Rechte für /KMines list
+[*]kMines.cmd.info - Rechte für /KMines info
+[*]kMines.cmd.configreload - Rechte für /KMines configreload
+[*]kMines.cmd.debug - Rechte für /KMines debug
+[*]kMines.cmd.blocks - Rechte für /KMines blocks
+[*]kMines.cmd.setcancel - Rechte für /KMines setcancel
+[*]kMines.cmd.togglebuild - Rechte für /KMines togglebuild
+[*]kMines.cmd.zonetool - Rechte für /KMines zonetool
+[/LIST]
+[LIST]
+[*]kMines.use.* - Rechte für Tools (uses)
+[*]kMines.use.zonetool - Rechte um die Zonetools zu benutzen
+[/LIST]

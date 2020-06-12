@@ -1,0 +1,85 @@
+#
+# KMines von Kyrium           
+# Lang DE V1.0                
+# Copyright                   
+# Diese Datei wird bei jedem Reload neu gespeichert! aenderungen sind hier Sinnlos
+# wenn du die Datei benutzen willst kopiere sie und aendere den Namen (lang_<lang>.yml)                  
+#
+
+Config:
+   Plugin:
+      Prefix: '[KMines] ' 
+      DPrefix: '[KMines-Debug] ' 
+      hasNoPerm: 'Du hast hierfuehr keine Berechtigung!'
+
+Debug:
+   event_onBreak_listener:
+      canBreakFalse: 'Freigabe fuer Task nicht erteilt (canBreak = false) | Block nicht gefunden'
+      canBreakFalse_cancel: 'Event Abgebrochen!'
+      canBreakTrue:  'Tasks werden ausgefuehrt'
+      checkFalse:  'Freigabe fuer Task nicht erteilt (canBreak = false) | Block nicht gefunden'
+      checkFalseLine1_0:  'Wird ersetzt durch: '
+      checkFalseLine1_1:  ' Erzeugt danach: '
+      checkFalseLine2:  'Freigabe fuer Task (canBreak = true)'
+      
+Commands: 
+   all:
+      onlyPlayer: 'Die Konsole kann diesen Befehl nicht ausfuehren!'
+      onlyConsole: 'Der Spieler kann diesen Befehl nicht ausfuehren!'
+      hasNoPerm: 'Du hast hierfuehr keine Berechtigung!' #derzeit unbenutzt
+   defaultHelp:
+      Line_1: '+----------------------------------+'
+      Line_2: '[Arg] = Optional | <arg> = Pflicht'
+      Line_3: '+----------------------------------+'
+      Cmd_1: 'Zeigt das Hilfe menue'
+      Cmd_2: 'Fuege eine neue Region hinzu'
+      Cmd_3: 'Entfernt eine Region'
+      Cmd_4: 'Listet alle Regionen auf'
+      Cmd_5: 'Listet Infos ueber die Region auf'
+      Cmd_6: 'setzt die Materialien einer Region (Halte das Matierel in der Mainhand und das zum ersetzten in der Offhand)'
+      Cmd_7: 'Schaltet den Baumodus um'
+      Cmd_8: '(De-)Aktiviert den Debugmodus'
+      Cmd_9: 'Gibt dir das Tool um Regionen zu Markieren'
+      Cmd_10: 'Laed die Config datei neu'
+   set:
+      errorFormat_1: 'KoordinatenFormat wurde nicht beachtet'
+      errorFormat_2: 'exsistiert bereits'
+      errorFormat_3: 'Ein Argument wurde nicht gesetzt!'
+      errorFormat_3: 'einer der 2 Punkte von dem Tool wurde nicht gefunden'
+      isTrue: ' Wurde gesetzt (Materialien bitte in der Konfig setzten!)'
+   remove:
+      errorFormat_1: 'es wurde kein Name (Region) gesetzt!'
+      errorFormat_2: '  nicht gefunden'
+      isTrue: ' wurde Entfernt'
+   list:
+      errorFormat_1: null
+      infoFormat_1: 'Keine Regionen verfuegbar'
+      infoFormat_2: 'Folgende Regionen sind vorhanden:'
+      infoFormat_3: '--- mehr Infos mit: /kmines info <name> ---'
+      isTrue: 'Regionen:'
+   info:
+      errorFormat_1: 'es fehlen Parameter!'
+      errorFormat_2: 'Region gibt es nicht'
+      infoFormat_1: 'Die Region {region} hat folgende werte:'
+      infoFormat_Line_1: '+----------------------------------+'
+      isTrue: null
+   debug:
+      errorFormat_1: 'Bitte waehle true oder false!'
+      isTrue: ' wurde gesetzt'
+   cfgreload:
+      isTrue: ' Config wurde neu geladen!'
+   blocks:
+      errorFormat_1: 'Es fehlen Argumente'
+      errorFormat_2: 'Region ist nicht vorhanden'
+      errorFormat_3: 'Bitte waehle: add remove replacer'
+      errorFormat_4: 'Es muessen Blocke sein...'
+      add: '{mat} wurde zu {region} hinzugef�gt'
+      remove: '{mat} wurde aus der Liste von {region} entfernt'
+      replace: '{mat} in der Region {region} wird nun durch {replace} ersetzt'
+      itemnotfound: 'Das Item ist nicht in dieser Region registriert'
+      itemisnblock: 'Bitte halte einen Block in der Hand'
+      isTrue_1: ' wurde auf {result} gesetzt'
+   togglebuild:
+      isTrue: Baumodus Aktiviert
+      isFalse: Baumodus Deaktivert
+      

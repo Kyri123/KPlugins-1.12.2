@@ -1,0 +1,33 @@
+###############################
+# KMines von Kyrium           #
+# Config V1.0                 #
+# Copyright                   #
+###############################
+
+debug: false 
+lang: de_de
+
+# Regions
+#Benutze das Format: X/Y/Z
+
+#mat_canDestroy: AIR,DIRT | mit , trennen oder bei 1 Material komma weglassen!
+#respawnTimer: 200        | Timer 20 Ticks = 1 sec
+#useCancelEvent: true     | (TRUE) man kann nicht in dem Bereich abbauen (ausser mat_canDestroy)
+
+
+KMinesRegion:
+  test:
+    name: test
+    location_1: 1000/255/1000
+    location_2: -1000/0/-1000
+    world: world
+    useBreakCancelEvent: true 
+    mats_destroy:
+       DIRT:
+          timer: 200
+          replacer: IRON_BLOCK
+          meta: SOON
+       STONE:
+          timer: 200
+          replacer: GOLD_BLOCK
+          meta: SOON

@@ -1,0 +1,73 @@
+package core.kyriums.mines.commands;
+
+import java.io.IOException;
+
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
+
+public class kMines_sub_Debug {
+
+	//Colors
+	private ChatColor DARK_PURPLE = ChatColor.DARK_PURPLE;
+	private ChatColor RED = ChatColor.RED;
+	private ChatColor DARK_RED = ChatColor.DARK_RED;
+	private ChatColor GREEN = ChatColor.GREEN;
+	private ChatColor GOLD = ChatColor.GOLD;
+
+	//Vars
+	private final Plugin plugin;
+	private FileConfiguration lang;
+	private CommandSender sender;
+	@SuppressWarnings("unused")
+	private String commandLabel;
+	private String[] args;
+	@SuppressWarnings("unused")
+	private Command cmd;
+
+	public kMines_sub_Debug(CommandSender sender, Command cmd, String commandLabel, String[] args, Plugin plugin, FileConfiguration lang) {
+		this.sender = sender;
+		this.cmd = cmd;
+		this.commandLabel = commandLabel;
+		this.args = args;
+		this.plugin = plugin;
+		this.lang = lang;
+	}
+
+	
+    //Commands
+    public boolean execute() {
+		
+    	if(!(sender instanceof Player)) {
+    		sender.sendMessage(RED + lang.getString("Config.Plugin.Prefix") + lang.getString("Commands.defaultHelp.onlyPlayer"));
+    		return false;
+    	}
+    	Player p = (Player) sender;
+
+    	if((args.length == 2 && args[1].equals("true")) || (args.length == 2 && args[1].equals("false"))) {
+
+    		boolean name_region = Boolean.parseBoolean(args[1]);
+	        FileConfiguration yaml = plugin.getConfig();
+	        
+	        yaml.set("debug", name_region);
+	    	
+	    	try {
+	            yaml.save(plugin.getDataFolder() + "/config.yml");
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+
+    		plugin.reloadConfig();
+    		p.sendMessage(DARK_PURPLE + lang.getString("Config.Plugin.Prefix")+" " + GOLD + name_region + GREEN + lang.getString("Commands.debug.isTrue"));
+	    	return true;
+    	}
+    	else {
+    		p.sendMessage(DARK_PURPLE + lang.getString("Config.Plugin.Prefix")+" " + DARK_RED + lang.getString("Commands.debug.errorFormat_1"));
+    		return false;
+    	}
+    		
+    }
+}
