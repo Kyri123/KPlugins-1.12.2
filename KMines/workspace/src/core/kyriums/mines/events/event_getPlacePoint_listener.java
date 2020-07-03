@@ -70,7 +70,7 @@ public class event_getPlacePoint_listener implements Listener {
 				Cancel = true;
 				save = true;
 			}
-			if(name.contains("[KMines] ZoneTool Punkt 2")) {
+			else if(name.contains("[KMines] ZoneTool Punkt 2")) {
 				point = "2";
 				cfgloc = loc.getBlockX() + "/" + loc.getBlockY() + "/" + loc.getBlockZ();
 				Cancel = true;
